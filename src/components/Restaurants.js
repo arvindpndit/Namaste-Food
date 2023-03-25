@@ -1,16 +1,13 @@
 import React from "react";
 import Restaurant from "./Restaurant";
-import { products } from "./constants";
 import { useState } from "react";
 
-export function Search() {
+export function Search({ products, setData }) {
   const [searchText, setSearchText] = useState("");
 
   function changeHandler(e) {
     setSearchText(e.target.value);
   }
-
-  const [restaurant, setRestaurant] = useState(products);
 
   function filterData(searchText, restaurant) {
     const dataFiltered = restaurant.filter((product) => {
@@ -38,10 +35,10 @@ export function Search() {
         className="w-20  p-2 rounded-md bg-sky-500/50 font-bold"
         onClick={() => {
           //filter the values
-          const newData = filterData(searchText, restaurant);
+          const newData = filterData(searchText, products);
           //set the new values
           console.log(newData);
-          setRestaurant(newData);
+          setData(newData);
         }}
       >
         Search
@@ -50,17 +47,9 @@ export function Search() {
   );
 }
 
-function Restaurants() {
+function Restaurants({ products }) {
   return (
     <div className="flex flex-wrap w-3/5 mx-auto content-between">
-      {/* <Restaurant product = {products[0]}/>
-      <Restaurant product = {products[1]}/>
-      <Restaurant product = {products[2]}/>dd
-      <Restaurant product = {products[3]}/>
-      <Restaurant product = {products[4]}/>
-      <Restaurant product = {products[5]}/>
-      <Restaurant product = {products[6]}/>
-      <Restaurant product = {products[7]}/> */}
       {products.map((product) => {
         return <Restaurant {...product} key={product.name} />;
       })}
