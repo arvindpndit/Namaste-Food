@@ -19,9 +19,9 @@ export function Search({ products, setData }) {
   }
 
   return (
-    <div className="mx-auto w-[100wh]">
+    <div className="mx-auto max-w-max w-[100wh]">
       <input
-        className="bg-slate-200 m-1 p-2 rounded-md "
+        className="bg-slate-200 m-1 p-2 rounded-md"
         type="text"
         placeholder="Search your food"
         title="food"
@@ -47,11 +47,14 @@ export function Search({ products, setData }) {
   );
 }
 
-function Restaurants({ products }) {
+function Restaurants(props) {
+  const products = props.products;
+  // console.log("products mila");
+  // console.log(products);
   return (
     <div className="flex flex-wrap w-3/5 mx-auto content-between">
-      {products.map((product) => {
-        return <Restaurant {...product} key={product.name} />;
+      {products?.map((product) => {
+        return <Restaurant {...product} key={product?.data?.id} />;
       })}
     </div>
   );
