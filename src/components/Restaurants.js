@@ -52,7 +52,7 @@ function Restaurants(props) {
   // console.log("products mila");
   // console.log(products);
   return (
-    <div className="flex flex-wrap w-3/5 mx-auto content-between">
+    <div className="flex flex-wrap mx-auto justify-evenly px-8 ">
       {products?.map((product) => {
         return <Restaurant {...product} key={product?.data?.id} />;
       })}
