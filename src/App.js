@@ -4,14 +4,14 @@ import { ReactDOM } from "react-dom";
 import Title from "./components/Title";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Title/>
-      <Body/>
-      <Footer/>
+      <Title />
+      <Outlet />
+      <Footer />
     </div>
   );
 }

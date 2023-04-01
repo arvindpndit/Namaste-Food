@@ -22,9 +22,6 @@ export default function Body() {
     const json = await data.json();
     setProducts(json?.data?.cards[2]?.data?.data?.cards);
     setShowshimmer(false);
-    // console.log("api call successful");
-    // console.log(newProducts);
-    //console.log(json?.data?.cards[2]?.data?.data?.cards);
   }
 
   function setData(newData) {
