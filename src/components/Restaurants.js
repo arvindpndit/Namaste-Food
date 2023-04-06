@@ -1,6 +1,7 @@
 import React from "react";
 import Restaurant from "./Restaurant";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Search({ products, setData }) {
   const [searchText, setSearchText] = useState("");
@@ -54,7 +55,11 @@ function Restaurants(props) {
   return (
     <div className="flex flex-wrap mx-auto justify-evenly px-8 ">
       {products?.map((product) => {
-        return <Restaurant {...product} key={product?.data?.id} />;
+        return (
+          <Link to={"restaurant/" + product.data.id}>
+            <Restaurant {...product} key={product?.data?.id} />;
+          </Link>
+        );
       })}
     </div>
   );
