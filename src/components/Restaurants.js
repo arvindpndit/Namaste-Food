@@ -20,9 +20,9 @@ export function Search({ products, setData }) {
   }
 
   return (
-    <div className="mx-auto max-w-max w-[100wh]">
+    <div className="w-2/3 h-16 flex justify-center items-center mx-auto">
       <input
-        className="bg-slate-200 m-1 p-2 rounded-md"
+        className="rounded-full bg-[#fff9f0] p-4 w-3/4 text-[#008037]"
         type="text"
         placeholder="Search your food"
         title="food"
@@ -33,7 +33,7 @@ export function Search({ products, setData }) {
       />
       <button
         htmlFor="searchText "
-        className="w-20  p-2 rounded-md bg-sky-500/50 font-bold"
+        className=" rounded-full bg-[#00803774] p-4 ml-3 w-1/4 hover:bg-[#00803798] text-[#008037] "
         onClick={() => {
           //filter the values
           const newData = filterData(searchText, products);
@@ -57,7 +57,7 @@ function Restaurants(props) {
       {products?.map((product) => {
         return (
           <Link to={"restaurant/" + product.data.id}>
-            <Restaurant {...product} key={product?.data?.id} />;
+            <Restaurant {...product} key={product?.data?.id} />
           </Link>
         );
       })}

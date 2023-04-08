@@ -8,7 +8,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#FFFFFF] font-sans">
       <Title />
       <Outlet />
       <Footer />
