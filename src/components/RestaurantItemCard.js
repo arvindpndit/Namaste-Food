@@ -8,7 +8,7 @@ const RestaurantItemCard = (props) => {
         </div>
 
         <img
-          className="w-52 h-32"
+          className="w-52 h-32 object-cover"
           src={
             "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" +
             props.item.card.info.imageId
