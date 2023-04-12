@@ -1,10 +1,11 @@
-import foodPic from "./assets/food.png";
+import foodPic from "../assets/food.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex mx-16 justify-between">
+    <div className="flex flex-wrap-reverse mx-16 justify-between">
       <div className="flex flex-col flex-wrap w-2/5">
-        <div className="flex gap-3 mt-36">
+        <div className="flex  gap-3 mt-36">
           <p className="text-8xl font-bold text-[#FF7E00] leading-[118px]">
             Namaste
           </p>
@@ -17,9 +18,12 @@ const Home = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit non
           nam praesentium! Commodi modi alias exercitationem possimus hic quas
         </p>
-        <button className="bg-[#2F2F2F] rounded-full w-44 py-4 text-white hover:shadow-lg hover:bg-emerald-800 font-semibold">
-          Feed your Tummy
-        </button>
+        <Link to="/body">
+          <button className="bg-[#2F2F2F] rounded-full w-44 py-4 text-white hover:shadow-lg hover:bg-emerald-800 font-semibold">
+            Feed your Tummy
+          </button>
+        </Link>
+
         <div>
           <p className="font-bold text-sm mt-12">5 stars Rating</p>
           <p className="text-sm text-[#909090]">Based on 1788 reviews</p>
