@@ -20,9 +20,9 @@ export function Search({ products, setData }) {
   }
 
   return (
-    <div className="w-1/2 h-16 flex justify-center items-center mx-auto">
+    <div className="w-1/2 h-16 flex justify-center items-center mx-auto my-4">
       <input
-        className="rounded-full bg-[#fff9f0] p-4 w-3/4 text-[#008037]"
+        className="rounded-sm bg-white shadow-md p-4 w-3/4 text-[#008037]"
         type="text"
         placeholder="Search your food"
         title="food"
@@ -33,7 +33,7 @@ export function Search({ products, setData }) {
       />
       <button
         htmlFor="searchText "
-        className=" rounded-full bg-[#00803774] p-4 ml-3 w-[15%] hover:bg-[#00803798] text-[#008037] "
+        className=" rounded-sm bg-[#FFE145] shadow-md text-semibold p-4 ml-3 w-[15%]  text-[#B79C10] "
         onClick={() => {
           //filter the values
           const newData = filterData(searchText, products);

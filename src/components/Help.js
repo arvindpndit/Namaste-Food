@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const Panel = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const Panel = ({ isVisible, setIsVisible }) => {
   return (
     <div className="py-4">
       <div className="flex justify-between text-green-800">
@@ -9,7 +8,7 @@ const Panel = () => {
         {isVisible ? (
           <button
             onClick={() => {
-              setIsVisible(false);
+              setIsVisible();
             }}
           >
             Hide
@@ -17,7 +16,7 @@ const Panel = () => {
         ) : (
           <button
             onClick={() => {
-              setIsVisible(true);
+              setIsVisible();
             }}
           >
             Show
@@ -25,8 +24,8 @@ const Panel = () => {
         )}
       </div>
 
-      {isVisible ? (
-        <p className="border-b-2 py-4 fond-sm text-green-700">
+      {isVisible && (
+        <p className="border-2 p-3 rounded-md fond-sm text-green-700 bg-green-50 mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
           perferendis illum earum veritatis sint. Quasi quos in, facere hic
           labore rem eveniet cum aut minus? Delectus quidem quos eius
@@ -34,22 +33,31 @@ const Panel = () => {
           eveniet. Dignissimos tenetur, sit voluptatum maxime laborum dolores
           saepe sed! Eius quam aperiam animi?
         </p>
-      ) : (
-        <p></p>
       )}
     </div>
   );
 };
 
 const Help = () => {
+  const [isVisible, setIsVisible] = useState({
+    question1: true,
+    question2: false,
+    question3: false,
+  });
+
   return (
     <div className="flex flex-col items-center justify-center p-5">
       <div className="w-10/12 min-h-1/2 border rounded-lg border-green-400 p-4">
-        {Array(10)
-          .fill("")
-          .map((index) => {
-            return <Panel key={index} />;
-          })}
+        <Panel
+          isVisible={isVisible.question1}
+          setIsVisible={{
+            question1: true,
+            question2: false,
+            question3: false,
+          }}
+        />
+        <Panel isVisible={isVisible.question2} />
+        <Panel isVisible={isVisible.question3} />
       </div>
     </div>
   );
