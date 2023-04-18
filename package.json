@@ -1,21 +1,24 @@
 {
-  "name": "react-tailwind-css-starter-pack",
+  "name": "namaste food",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
+    "url": "git+https://github.com/arvindpndit/Namaste-Food.git"
   },
-  "author": "Pranay Gupta",
+  "author": "Arvind Pandit Prajapati",
   "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
+    "url": "https://github.com/arvindpndit/Namaste-Food/issues"
   },
   "scripts": {
     "start": "react-scripts start",

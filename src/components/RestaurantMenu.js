@@ -28,7 +28,9 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <div>
-      <p className="text-xl uppercase font-bold w-9/12 mx-auto">Recommended</p>
+      <p className="text-xl uppercase font-bold w-9/12 mx-auto pl-5 mb-5">
+        Recommended
+      </p>
       {resList.map((item) => {
         return <RestaurantItemCard item={item} key={item.card.info.id} />;
       })}

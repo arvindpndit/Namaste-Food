@@ -53,7 +53,7 @@ const Home = () => {
             Food Delivery helps you bring food to your front door
           </div>
           <div>
-            <button className="mx-12 bg-green-600 px-4 py-2 rounded-full font-semibold">
+            <button className="mx-12 bg-green-600 py-3 px-4  rounded-full font-semibold">
               Download App
             </button>
           </div>

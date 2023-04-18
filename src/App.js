@@ -6,6 +6,8 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 import userContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import store from "./utils/store.js";
 
 function App() {
   const [user, setUser] = useState({
@@ -14,16 +16,18 @@ function App() {
   });
   return (
     <div className="bg-[#FFFFFF] font-sans">
-      <userContext.Provider
-        value={{
-          user: user,
-          setUser: setUser,
-        }}
-      >
-        <Title />
-        <Outlet />
-        <Footer />
-      </userContext.Provider>
+      <Provider store={store}>
+        <userContext.Provider
+          value={{
+            user: user,
+            setUser: setUser,
+          }}
+        >
+          <Title />
+          <Outlet />
+          <Footer />
+        </userContext.Provider>
+      </Provider>
     </div>
   );
 }

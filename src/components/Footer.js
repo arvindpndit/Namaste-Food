@@ -29,9 +29,12 @@ export default function Footer() {
           <p className="mb-4">FAQs</p>
         </div>
       </div>
-      <div className="flex w-9/12 justify-start gap-10 mt-10">
+      <div className="flex w-9/12 justify-start gap-14 mt-10">
         <p>Terms and conditions</p>
         <p>Privacy Policy</p>
+        <div>
+          This site is developed by Arvind Pandit - arvindpandit9808@gmail.com
+        </div>
       </div>
     </div>
   );

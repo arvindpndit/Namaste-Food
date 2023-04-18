@@ -22,7 +22,7 @@ export function Search({ products, setData }) {
   return (
     <div className="w-1/2 h-16 flex justify-center items-center mx-auto my-4">
       <input
-        className="rounded-sm bg-white shadow-md p-4 w-3/4 text-[#008037]"
+        className="rounded-sm bg-white shadow-md p-4 w-3/4 text-[#008037] outline-none"
         type="text"
         placeholder="Search your food"
         title="food"
@@ -50,8 +50,6 @@ export function Search({ products, setData }) {
 
 function Restaurants(props) {
   const products = props.products;
-  // console.log("products mila");
-  // console.log(products);
   return (
     <div className="flex flex-wrap mx-auto justify-evenly px-8 ">
       {products?.map((product) => {
