@@ -5,7 +5,6 @@ import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
-  console.log(id);
   const [resList, setResList] = useState(null);
   useEffect(() => {
     getRestaurantData();
@@ -28,7 +27,7 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <div>
-      <p className="text-xl uppercase font-bold w-9/12 mx-auto pl-5 mb-5">
+      <p className="text-xl text-[#3F4255] uppercase font-bold w-11/12 md:w-9/12 mx-auto pl-5 mb-5 mt-32">
         Recommended
       </p>
       {resList.map((item) => {

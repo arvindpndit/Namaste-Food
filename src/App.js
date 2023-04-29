@@ -15,7 +15,7 @@ function App() {
     email: "arvindpandit9808@gmail.com",
   });
   return (
-    <div className="bg-[#FFFFFF] font-sans">
+    <div className="bg-[#FFFFFF] font-sans overflow-x-hidden">
       <Provider store={store}>
         <userContext.Provider
           value={{

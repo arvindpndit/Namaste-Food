@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Restaurants from "./Restaurants";
 import Restaurant from "./Restaurant";
-import { Search } from "./Restaurants";
+import Search from "./Search";
 import { products } from "./constants";
 import Shimmer from "./Shimmer";
 
@@ -31,7 +31,7 @@ export default function Body() {
   return showShimmer ? (
     <Shimmer />
   ) : (
-    <div className="w-[100wh]">
+    <div className="w-[100wh] mt-32">
       <Search products={newProducts} setData={setData} />
       <Restaurants products={newProducts} />
     </div>

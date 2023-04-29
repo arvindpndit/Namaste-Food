@@ -11,12 +11,11 @@ const Cart = () => {
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-  console.log("checking the cartItem array after removing one item");
-  console.log(cartItems);
+
   return (
     <div>
-      <div className="w-11/12 min-h-full mx-auto flex justify-between  ">
-        <div className="w-1/2 ">
+      <div className="w-11/12 min-h-full mx-auto flex flex-col md:flex-row justify-between mt-32 ">
+        <div className="w-full md:w-1/2 ">
           <p className="text-3xl text-[#3F4255] mb-3">Shopping Cart</p>
           <p className="text-md text-[#909090] mb-8">
             You have {cartItems.length} items in your cart.
@@ -37,7 +36,7 @@ const Cart = () => {
         </div>
 
         {cartItems.length > 0 && (
-          <div className="w-[30%] h-[500px] ">
+          <div className="w-full md:w-[30%] md:h-[500px] mt-12 md:mt-0">
             <p className="text-xl text-[#3F4255] mb-5">Order Summary</p>
             <button className="h-12 w-full bg-green-100 rounded-md flex justify-center items-center gap-1 hover:bg-green-200">
               <BsApple className="text-xl" />
