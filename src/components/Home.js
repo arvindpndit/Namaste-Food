@@ -105,7 +105,7 @@ const Home = () => {
       </div>
 
       <div className="min-h-96 w-11/12 mx-auto flex flex-col ">
-        <p className="text-3xl md:text-4xl py-5 mb-4 text-[#3F4255]">
+        <p className="text-3xl md:text-4xl py-5 mb-4 text-[#3F4255]  text-center md:text-left">
           #namastefood <span className=" text-[#9093A6]">in instagram</span>
         </p>
         <div className="flex flex-wrap justify-evenly md:justify-between">

@@ -32,7 +32,7 @@ const RestaurantItemCard = (props) => {
 
           <button
             onClick={() => handleAddItem(props.item.card)}
-            className=" bg-green-50 text-[#3F4255] hover:bg-green-100 font-semibold p-2 uppercase"
+            className=" bg-green-100 text-[#3F4255] hover:bg-green-200 font-semibold p-2 uppercase"
           >
             Add Item+
           </button>

@@ -3,7 +3,6 @@ import { removeItem } from "../utils/cartSlices";
 import { useDispatch } from "react-redux";
 
 const CartItems = (props) => {
-  console.log(props);
   const dispatch = useDispatch();
   const handleRemoveItem = (props) => {
     dispatch(removeItem(props));
@@ -21,7 +20,7 @@ const CartItems = (props) => {
             className="w-40 h-24 rounded-2xl object-cover"
           />
           <div>
-            <p className="font-semibold text-xl text-[#3F4255]">
+            <p className="font-semibold text:md md:text-lg text-[#3F4255]">
               {props.info.name}
             </p>
             <p className="text-[#909090]"> ₹{props.info.price / 100}</p>

@@ -3,9 +3,7 @@ import Restaurant from "./Restaurant";
 
 import { Link } from "react-router-dom";
 
-function Restaurants(props) {
-  const products = props.products;
-
+function Restaurants({ products }) {
   return (
     <div className="flex flex-wrap mx-auto justify-evenly px-8 ">
       {products?.map((product) => {

@@ -1,15 +1,14 @@
 import { useState } from "react";
 
 const Search = ({ products, setData }) => {
+  const [filteredProducts] = useState(products);
   const [searchText, setSearchText] = useState("");
 
-  function changeHandler(e) {
-    setSearchText(e.target.value);
-  }
-
-  function filterData(searchText, restaurant) {
-    const dataFiltered = restaurant.filter((product) => {
-      return product?.name.toLowerCase().includes(searchText.toLowerCase());
+  function filterData(searchText, products) {
+    const dataFiltered = products.filter((product) => {
+      return product?.data?.name
+        .toLowerCase()
+        .includes(searchText.toLowerCase());
     });
 
     //console.log(dataFiltered);
@@ -17,31 +16,34 @@ const Search = ({ products, setData }) => {
   }
 
   return (
-    <div className="md:w-1/2 w-3/4 h-16 flex justify-center items-center mx-auto my-4">
+    <form
+      className="md:w-1/2 w-3/4 h-16 flex justify-center items-center mx-auto my-4"
+      onSubmit={(e) => e.preventDefault()}
+    >
       <input
-        className="rounded-sm bg-white shadow-md p-4 w-3/4 text-[#008037] outline-none"
+        className="shadow-sm bg-white border border-r-0  p-4 w-3/4 text-[#008037] outline-none"
         type="text"
         placeholder="Search your food"
         title="food"
         name="searchText"
         id="searchText"
         value={searchText}
-        onChange={changeHandler}
+        onChange={(e) => setSearchText(e.target.value)}
       />
       <button
         htmlFor="searchText "
-        className=" rounded-sm bg-[#FFE145] shadow-md text-semibold p-4 ml-3   text-[#B79C10] "
+        className="shadow-sm border border-l-0   bg-[#FFE145] text-semibold p-4  text-[#B79C10] "
         onClick={() => {
           //filter the values
-          const newData = filterData(searchText, products);
+          const newData = filterData(searchText, filteredProducts);
           //set the new values
-          console.log(newData);
+          //console.log(newData);
           setData(newData);
         }}
       >
         Search
       </button>
-    </div>
+    </form>
   );
 };
 

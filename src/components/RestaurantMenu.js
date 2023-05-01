@@ -11,16 +11,20 @@ const RestaurantMenu = () => {
   }, []);
 
   async function getRestaurantData() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.3164945&lng=78.03219179999999&restaurantId=" +
-        id +
-        "&submitAction=ENTER"
-    );
-    const json = await data.json();
-    const itemCards =
-      json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-        ?.card?.itemCards;
-    setResList(itemCards);
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.3164945&lng=78.03219179999999&restaurantId=" +
+          id +
+          "&submitAction=ENTER"
+      );
+      const json = await data.json();
+      const itemCards =
+        json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+          ?.card?.itemCards;
+      setResList(itemCards);
+    } catch (error) {
+      console.error(`Opps!!! Something went wrong ${error}`);
+    }
   }
 
   return !resList ? (

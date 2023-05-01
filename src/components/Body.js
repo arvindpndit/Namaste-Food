@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Restaurants from "./Restaurants";
 import Restaurant from "./Restaurant";
 import Search from "./Search";
-import { products } from "./constants";
+import { products } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 export default function Body() {

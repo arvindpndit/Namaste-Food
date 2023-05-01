@@ -25,7 +25,7 @@ const About = () => {
             </div>
           </div>
           <p className="text-md text-center md:text-left w-[100%] text-[#909090]">
-            I'm a frontend developer who can build large scable appilations from
+            I'm a frontend developer who builds large scable appilations from
             scratch.
             <br /> This application is made by me from scratch using ReactJs.
           </p>

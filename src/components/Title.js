@@ -39,7 +39,7 @@ export default function Title() {
       </ul>
 
       {showMenu && (
-        <ul className="flex-col text-[#9093A6] md:hidden fixed top-20 z-40 w-full bg-white rounded-lg  py-3 	">
+        <ul className="flex-col text-[#9093A6] md:hidden fixed top-20 z-40 w-full bg-white rounded-lg  py-3 shadow-md	">
           <li
             className="px-3 font-semibold hover:underline hover:font-bold py-3 hover:bg-gray-100"
             onClick={() => setShowMenu(false)}
@@ -76,7 +76,7 @@ export default function Title() {
       )}
 
       <GiHamburgerMenu
-        className="visible md:hidden text-3xl mx-2 text-[#3F4255]"
+        className="visible md:hidden text-3xl mx-2 text-[#3F4255] hover:cursor-pointer"
         onClick={() => setShowMenu(!showMenu)}
       />
     </div>
