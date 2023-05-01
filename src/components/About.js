@@ -60,14 +60,6 @@ const About = () => {
               <SiLeetcode className="text-5xl text-red-500 hover:cursor-pointer hover:scale-95 duration-200" />
             </a>
           </div>
-
-          <div>
-            <p className="font-bold text-sm mt-12">Skills</p>
-            <p className="text-sm text-[#909090]">
-              ReactJs | HTML5 | CSS3 | JavaScript | C++ | Tailwind CSS | Redux |
-              Problem Solving | Data Structures | Algorithms |
-            </p>
-          </div>
         </div>
         <div className="flex items-center justify-center ">
           <img

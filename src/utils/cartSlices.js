@@ -14,10 +14,6 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.items = [];
     },
-    removeItem: (state) => {
-      //let newArray = studentArr.map((item) => ({ name: item.name, age: item.age }));
-      state.items.map((item) => item.info.id !== id);
-    },
   },
 });
 

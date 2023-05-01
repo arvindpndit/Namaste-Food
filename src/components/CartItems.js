@@ -1,12 +1,6 @@
 import { FiTrash2 } from "react-icons/fi";
-import { removeItem } from "../utils/cartSlices";
-import { useDispatch } from "react-redux";
 
 const CartItems = (props) => {
-  const dispatch = useDispatch();
-  const handleRemoveItem = (props) => {
-    dispatch(removeItem(props));
-  };
   return (
     <div>
       <div className="h-28 w-full border rounded-2xl p-3 flex items-center justify-between mb-5 shadow-sm hover:bg-green-50">
@@ -27,7 +21,7 @@ const CartItems = (props) => {
           </div>
         </div>
 
-        <button onClick={() => handleRemoveItem(props)}>
+        <button>
           <FiTrash2 />
         </button>
       </div>
