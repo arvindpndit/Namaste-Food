@@ -1,6 +1,6 @@
 # Namaste🙏Food
 
-Namaste Food is large scalable video streaming appilication which uses Swiggy's API to fetch the Restaurants.
+Namaste Food is large scalable food ordering appilication which uses Swiggy's API to fetch the Restaurants.
 
 ## Tech Stack
 
