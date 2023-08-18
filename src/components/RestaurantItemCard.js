@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlices";
+import { BsCheckLg } from "react-icons/bs";
 
 const RestaurantItemCard = (props) => {
   const dispatch = useDispatch();

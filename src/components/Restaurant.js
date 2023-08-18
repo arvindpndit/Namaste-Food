@@ -9,7 +9,7 @@ export default function Restaurant(props) {
       >
         <img
           src={
-            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+            "https://corsproxy.io/?https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
             props?.data?.cloudinaryImageId
           }
           alt="food"

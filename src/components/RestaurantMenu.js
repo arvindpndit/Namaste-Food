@@ -13,7 +13,7 @@ const RestaurantMenu = () => {
   async function getRestaurantData() {
     try {
       const data = await fetch(
-        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.3164945&lng=78.03219179999999&restaurantId=" +
+        "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.3164945&lng=78.03219179999999&restaurantId=" +
           id +
           "&submitAction=ENTER"
       );
@@ -34,9 +34,10 @@ const RestaurantMenu = () => {
       <p className="text-xl text-[#3F4255] uppercase font-bold w-11/12 md:w-9/12 mx-auto pl-5 mb-5 mt-32">
         Recommended
       </p>
-      {resList.map((item) => {
-        return <RestaurantItemCard item={item} key={item.card.info.id} />;
-      })}
+      {resList &&
+        resList.map((item) => {
+          return <RestaurantItemCard item={item} key={item.card.info.id} />;
+        })}
     </div>
   );
 };
