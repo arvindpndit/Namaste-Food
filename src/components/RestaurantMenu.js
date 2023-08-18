@@ -30,8 +30,8 @@ const RestaurantMenu = () => {
   return !resList ? (
     <Shimmer />
   ) : (
-    <div>
-      <p className="text-xl text-[#3F4255] uppercase font-bold w-11/12 md:w-9/12 mx-auto pl-5 mb-5 mt-32">
+    <div className=" w-full md:w-10/12  mx-auto">
+      <p className="text-xl text-[#3F4255] uppercase font-bold ml-2 md:ml-14 mb-5 mt-32">
         Recommended
       </p>
       {resList &&
