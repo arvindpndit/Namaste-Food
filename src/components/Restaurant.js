@@ -2,24 +2,40 @@ import React from "react";
 
 export default function Restaurant(props) {
   return (
-    <div>
-      <div
-        className="flex flex-col flex-wrap border-2 h-80 w-72 p-3 m-4  hover:scale-105 duration-300 hover:shadow-lg
-       "
-      >
+    <div className="w-72 p-2 md:p-3 ">
+      <div className="  overflow-hidden  hover:scale-95 transition duration-200">
         <img
           src={
-            "https://corsproxy.io/?https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-            props?.data?.cloudinaryImageId
+            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+            props?.info?.cloudinaryImageId
           }
           alt="food"
-          className="h-40- w-full object-cover lazy"
+          className="h-40 w-full object-cover rounded-lg"
         />
-
-        <h3 className="font-semibold mt-3 font-lg">{props.data.name}</h3>
-        <h4 className="text-xs">{props?.data?.cuisines.join(", ")}</h4>
-        <h5 className="mt-1 text-sm">{props?.data?.minDeliveryTime} MINS</h5>
-        <h5> {props?.data?.costForTwoString}</h5>
+        <div className="p-4">
+          <h3 className="text-lg font-semibold">{props.info.name}</h3>
+          <h4 className="text-xs text-gray-600 mt-1">
+            {props?.info?.cuisines.join(", ")}
+          </h4>
+          <div className="flex items-center mt-2">
+            <span className="text-yellow-500">
+              {props?.info?.avgRating} stars
+            </span>
+            <span className="ml-2 text-gray-500">
+              ({props?.info?.numRatings} ratings)
+            </span>
+          </div>
+          <div className="mt-3 text-sm text-gray-600">
+            {props?.info?.aggregatedDiscountInfoV3?.header}{" "}
+            {props?.info?.aggregatedDiscountInfoV3?.subHeader}
+          </div>
+          <div className="mt-1 text-xs text-gray-500">
+            {
+              props?.info?.aggregatedDiscountInfoV3?.discountCalloutInfo
+                ?.message
+            }
+          </div>
+        </div>
       </div>
     </div>
   );

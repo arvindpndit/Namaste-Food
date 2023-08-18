@@ -12,8 +12,8 @@ function Restaurants({ products }) {
       {products?.map((product) => {
         return (
           <Link
-            to={"restaurant/" + product.data.id}
-            key={product?.data?.id}
+            to={"restaurant/" + product.info.id}
+            key={product?.info?.id}
             onClick={scrollToTop}
           >
             <Restaurant {...product} />

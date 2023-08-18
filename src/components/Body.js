@@ -20,7 +20,13 @@ export default function Body() {
     );
 
     const json = await data.json();
-    setProducts(json?.data?.cards[2]?.data?.data?.cards);
+    setProducts(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    console.log(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
     setShowshimmer(false);
   }
 
